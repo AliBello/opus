@@ -26,7 +26,7 @@ local function loadBootOptions()
 		local f = fs.open('.startup.boot', 'w')
 		f.write(textutils.serialize({
 			delay = 1.5,
-			preload = { },
+			preload = { [1] = '/packages/secure/unlock.lua'},
 			menu = {
 				{ prompt = os.version() },
 				{ prompt = 'Opus'         , args = { '/sys/boot/opus.lua' } },
@@ -140,17 +140,16 @@ local function splash()
 		term.setBackgroundColor(colors.black)
 		term.clear()
 		local opus = {
-			'fffff00',
-			'ffff07000',
-			'ff00770b00f4444',
-			'ff077777444444444',
-			'f07777744444444444',
-			'f0000777444444444',
-			'070000111744444',
-			'777770000',
-			'7777000000',
-			'70700000000',
-			'077000000000',
+			'1',
+			'1',
+			'1',
+			'1       1',
+			'1       1',
+			'1       1',
+			'1',
+			'1',
+			'1',
+			'1',
 		}
 		for k,line in ipairs(opus) do
 			term.setCursorPos((w - 18) / 2, k + (h - #opus) / 2)
@@ -158,7 +157,7 @@ local function splash()
 		end
 	end
 
-	local str = 'Press any key for menu'
+	local str = 'Eigendom van PRU'
 	term.setCursorPos((w - #str) / 2, h)
 	term.write(str)
 end
