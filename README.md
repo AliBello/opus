@@ -16,5 +16,5 @@
 
 ## Install
 ```
-pastebin run VvUVx92v
+pastebin run NAHVFF9C
 ```
