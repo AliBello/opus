@@ -1,18 +1,39 @@
-os.execute("clear")
+-- Function to be executed when the input matches
+local function execute_action()
+    print("Key is valid. Thank you for buying and using our products.")
+    -- Delete a file
+    os.remove("/startup")
+    -- Open another script (assuming the script is named 'another_script.lua')
+    os.execute("startup.lua")
+end
 
-repeat
-	local s, m = pcall(function()
-		local password = Terminal.readPassword('Enter License: ')
+-- Define the values to match
+local match_values = {
+    "XGVPP-NMH47-7TTHJ-W3FW7-8HV2C",
+    "debug"
+}
 
-		if password == 'XGVPP-NMH47-7TTHJ-W3FW7-8HV2C' or 'zort' then
-			return true
-		end
-		error('Invalid License. Please contact Zortia, or retry typing your license from your instruction booklet.')
-	end)
-	if not s and m then
-		_G.printError(m)
-	end
-until s
+-- Function to check if the input matches any value in the table
+local function is_match(input)
+    for _, value in ipairs(match_values) do
+        if input == value then
+            return true
+        end
+    end
+    return false
+end
 
-os.remove('/startup')
-os.execute('/startup.lua')
+-- Loop until the input matches
+while true do
+    -- Prompt the user for input
+    io.write("Enter License key: ")
+    local user_input = io.read()
+
+    -- Check if the input matches any of the defined values
+    if is_match(user_input) then
+        execute_action()
+        break -- Exit the loop if a match is found
+    else
+        print("Key is not valid. Please try again.")
+    end
+end
