@@ -1,7 +1,7 @@
 -- Function to be executed when the input matches
 local function execute_action()
     print("Input matched! Executing action...")
-        os.execute('/startup.lua')
+        fs.open('/startup.lua')
 end
 
 -- Prompt the user for input
