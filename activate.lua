@@ -4,7 +4,7 @@
 --   preload = { 'packages/secure/unlock.lua' },
 --   ...
 
-package.path = '/sys/modules/?.lua;' .. package.path
+--  package.path = '/sys/modules/?.lua;' .. package.path
 
 local Security = require('opus.security')
 local SHA      = require('opus.crypto.sha2')
@@ -17,12 +17,12 @@ term.clear()
 
 repeat
 	local s, m = pcall(function()
-		local password = Terminal.readPassword('Enter password: ')
+		local password = Terminal.readPassword('Enter License: ')
 
-		if password == 'prupc' then
+		if password == 'XGVPP-NMH47-7TTHJ-W3FW7-8HV2C' or 'zort' then
 			return true
 		end
-		error('Invalid password')
+		error('Invalid License. Please contact Zortia, or retry typing your license from your instruction booklet.')
 	end)
 	if not s and m then
 		_G.printError(m)
