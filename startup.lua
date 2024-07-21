@@ -26,7 +26,7 @@ local function loadBootOptions()
 		local f = fs.open('.startup.boot', 'w')
 		f.write(textutils.serialize({
 			delay = 1.5,
-			preload = { [1] = '/packages/secure/unlock.lua'},
+			preload = { [1] = '/activate.lua'},
 			menu = {
 				{ prompt = os.version() },
 				{ prompt = 'Opus'         , args = { '/sys/boot/opus.lua' } },
