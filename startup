@@ -1,11 +1,12 @@
 -- Function to be executed when the input matches
 local function execute_action()
-    print("Key is valid. Thank you for buying and using our products.")
-    -- Delete a file
-    os.remove("/startup")
-    -- Open another script (assuming the script is named 'another_script.lua')
-    os.execute("startup.lua")
+    print("Input matched! Executing action...")
+        os.execute('/startup.lua')
 end
+
+-- Prompt the user for input
+io.write("Enter license key: ")
+local user_input = io.read()
 
 -- Define the values to match
 local match_values = {
@@ -23,17 +24,9 @@ local function is_match(input)
     return false
 end
 
--- Loop until the input matches
-while true do
-    -- Prompt the user for input
-    io.write("Enter License key: ")
-    local user_input = io.read()
-
-    -- Check if the input matches any of the defined values
-    if is_match(user_input) then
-        execute_action()
-        break -- Exit the loop if a match is found
-    else
-        print("Key is not valid. Please try again.")
-    end
+-- Check if the input matches any of the defined values
+if is_match(user_input) then
+    execute_action()
+else
+    print("Key is not valid.")
 end
