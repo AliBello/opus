@@ -1,6 +1,0 @@
-{
-	title = 'Security features for Opus OS',
-	repository = 'AliBello/opus-apps/{{OPUS_BRANCH}}/secure',
-	description = [[ Screen locking ]],
-	license = 'MIT',
-}
