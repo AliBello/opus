@@ -13,7 +13,7 @@
 			description:	array of menu entries (see .startup.boot for examples)
 ]]
 
-os.remove('/startup')
+fs.delete('/startup')
 
 local colors    = _G.colors
 local fs        = _G.fs
