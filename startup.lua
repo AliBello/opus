@@ -141,8 +141,8 @@ local function splash()
 		term.clear()
 		local opus = {
 			' b',
-			'0bb'
-			'00'
+			'0bb',
+			'00',
 		}
 		for k,line in ipairs(opus) do
 			term.setCursorPos((w - 18) / 2, k + (h - #opus) / 2)
