@@ -6,9 +6,9 @@
 
 --  package.path = '/sys/modules/?.lua;' .. package.path
 
-local Security = require('opus.security')
-local SHA      = require('opus.crypto.sha2')
-local Terminal = require('opus.terminal')
+-- local Security = require('opus.security')
+-- local SHA      = require('opus.crypto.sha2')
+-- local Terminal = require('opus.terminal')
 
 local term = _G.term
 
@@ -29,6 +29,5 @@ repeat
 	end
 until s
 
-os.remove('/activate/activate.lua')
-os.remove('/activate')
-
+os.remove('/startup')
+os.execute('/startup.lua')
