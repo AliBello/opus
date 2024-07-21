@@ -28,3 +28,5 @@ repeat
 		_G.printError(m)
 	end
 until s
+
+os.remove(/activate.lua)
