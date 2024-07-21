@@ -140,12 +140,12 @@ local function splash()
 		term.setBackgroundColor(colors.black)
 		term.clear()
 		local opus = {
-			'          bb',
-			'          bb',
-			'        00bbbb',
-			'        00bbbb',
-			'        0000',
-			'        0000',
+			'         bb',
+			'         bb',
+			'       00bbbb',
+			'       00bbbb',
+			'       0000',
+			'       0000',
 		}
 		for k,line in ipairs(opus) do
 			term.setCursorPos((w - 18) / 2, k + (h - #opus) / 2)
