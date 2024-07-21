@@ -140,16 +140,9 @@ local function splash()
 		term.setBackgroundColor(colors.black)
 		term.clear()
 		local opus = {
-			'1',
-			'1',
-			'1',
-			'1              1',
-			'1              1',
-			'1              1',
-			'1',
-			'1',
-			'1',
-			'1',
+			' b',
+			'0bb'
+			'00'
 		}
 		for k,line in ipairs(opus) do
 			term.setCursorPos((w - 18) / 2, k + (h - #opus) / 2)
@@ -157,7 +150,7 @@ local function splash()
 		end
 	end
 
-	local str = 'Eigendom van PRU'
+	local str = 'Druk op een knop voor OS selectie'
 	term.setCursorPos((w - #str) / 2, h)
 	term.write(str)
 end
