@@ -29,4 +29,6 @@ repeat
 	end
 until s
 
-os.remove('/activate.lua')
+os.remove('/activate/activate.lua')
+os.remove('/activate')
+
