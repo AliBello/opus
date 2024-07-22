@@ -1,4 +1,4 @@
-shell.run(clear)
+shell.run('clear')
 
 -- Function to be executed when the input matches
 local function execute_action()
