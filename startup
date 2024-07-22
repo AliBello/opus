@@ -1,3 +1,5 @@
+shell.run(clear)
+
 -- Function to be executed when the input matches
 local function execute_action()
     print("Computer has been activated! Thank you for buying and using our products.")
