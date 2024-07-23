@@ -19,7 +19,7 @@ repeat
 	local s, m = pcall(function()
 		local password = Terminal.readPassword('Enter password: ')
 
-		if password == 'prupc' then
+		if password == 'prupc' or 'zopc' then
 			return true
 		end
 		error('Invalid password')
