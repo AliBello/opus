@@ -157,7 +157,7 @@ local function splash()
 		end
 	end
 
-	local str = 'Eigendom van PRU'
+	local str = 'Eigendom van Zortopia'
 	term.setCursorPos((w - #str) / 2, h)
 	term.write(str)
 end
